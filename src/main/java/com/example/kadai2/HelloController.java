@@ -122,17 +122,6 @@ public class HelloController {
 
 
     public void koushinBotton(ActionEvent event) {
-//        User selectedUser = table.getSelectionModel().getSelectedItem();
-//        if (selectedUser != null) {
-//            String company = company2.getValue();
-//            String name = name2.getText();
-//            int score = Integer.parseInt(score2.getText());
-//            selectedUser.setCompany(company);
-//            selectedUser.setName(name);
-//            selectedUser.setScore(score);
-//            table.refresh();
-//            table.getSelectionModel().clearSelection();
-//        }
 
         User selectedUser = table.getSelectionModel().getSelectedItem();
         if (selectedUser != null) {
