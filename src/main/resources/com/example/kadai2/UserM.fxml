@@ -6,38 +6,39 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kadai2.HelloController">
    <children>
-      <ChoiceBox layoutX="93.0" layoutY="74.0" prefHeight="25.0" prefWidth="149.0" />
+       <ComboBox fx:id="company1" layoutX="92.0" layoutY="74.0" prefWidth="150.0" />
       <TextField fx:id="name1" layoutX="92.0" layoutY="110.0" prefHeight="25.0" prefWidth="149.0" />
       <TextField fx:id="score1" layoutX="92.0" layoutY="147.0" prefHeight="25.0" prefWidth="149.0" />
       <Label layoutX="24.0" layoutY="114.0" prefHeight="17.0" prefWidth="33.0" text="名前" />
       <Label layoutX="25.0" layoutY="151.0" prefHeight="17.0" prefWidth="33.0" text="スコア" />
       <Label layoutX="18.0" layoutY="78.0" prefHeight="17.0" prefWidth="61.0" text="所属企業" />
       <Label layoutX="31.0" layoutY="45.0" text="ユーザー追加" />
-      <Button layoutX="93.0" layoutY="182.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="48.0" text="追加" />
+      <Button fx:id="tuika" layoutX="93.0" layoutY="182.0" mnemonicParsing="false" onAction="#tuikaBotton" prefHeight="25.0" prefWidth="48.0" text="追加" />
 
 
+       <ComboBox fx:id="company2" layoutX="395.0" layoutY="74.0" prefWidth="150.0" />
       <Label layoutX="334.0" layoutY="45.0" text="ユーザー編集" />
-      <ChoiceBox layoutX="394.0" layoutY="74.0" prefWidth="150.0" />
       <TextField fx:id="name2" layoutX="395.0" layoutY="110.0" />
       <TextField fx:id="score2" layoutX="395.0" layoutY="147.0" />
       <Label layoutX="320.0" layoutY="78.0" text="所属企業" />
       <Label layoutX="330.0" layoutY="114.0" text="名前" />
       <Label layoutX="330.0" layoutY="151.0" text="スコア" />
-      <Button layoutX="394.0" layoutY="182.0" mnemonicParsing="false" text="削除" />
-      <Button layoutX="492.0" layoutY="182.0" mnemonicParsing="false" text="更新" />
+      <Button fx:id="sakujo" layoutX="394.0" layoutY="182.0" mnemonicParsing="false" onAction="#sakujoBotton" text="削除" />
+      <Button fx:id="koushin" layoutX="492.0" layoutY="182.0" mnemonicParsing="false" onAction="#koushinBotton" text="更新" />
       <Label layoutX="10.0" layoutY="14.0" prefHeight="17.0" prefWidth="104.0" text="ユーザー管理システム" />
-      <TableView layoutX="66.0" layoutY="226.0" prefHeight="156.0" prefWidth="477.0">
+      <TableView fx:id="table" layoutX="66.0" layoutY="226.0" prefHeight="156.0" prefWidth="477.0">
 
 
         <columns>
-          <TableColumn prefWidth="90.0" text="ID" />
-          <TableColumn prefWidth="145.0" text="所属企業" />
-            <TableColumn prefWidth="117.0" text="名前" />
-            <TableColumn prefWidth="125.0" text="スコア" />
+          <TableColumn fx:id="column1" prefWidth="90.0" text="ID" />
+          <TableColumn fx:id="column2" prefWidth="145.0" text="所属企業" />
+            <TableColumn fx:id="column3" prefWidth="117.0" text="名前" />
+            <TableColumn fx:id="column4" prefWidth="125.0" text="スコア" />
         </columns>
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
       </TableView>
+      <Label fx:id="errorMessage" layoutX="227.0" layoutY="177.0" prefHeight="36.0" prefWidth="149.0" textFill="RED" />
    </children>
 </AnchorPane>
